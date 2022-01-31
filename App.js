@@ -11,7 +11,7 @@ export default function App() {
 
   const addGoalHandler = () => {
     setCourseGoals((currentGoals) => [...currentGoals, enteredGoal]);
-    setEnteredGoad('')
+    setEnteredGoad('');
   };
 
   return (
@@ -27,7 +27,9 @@ export default function App() {
       </View>
       <View>
         {courseGoals.map((goal, i) => (
-          <Text key={i}>{goal}</Text>
+          <View style={styles.listItem} key={i}>
+            <Text>{goal}</Text>
+          </View>
         ))}
       </View>
     </View>
@@ -42,4 +44,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   input: { borderColor: 'black', borderWidth: 1, padding: 10, width: '80%' },
+  listItem:{
+    padding:10,
+    marginVertical:10,
+    backgroundColor: '#ccc',
+    borderColor: 'black',
+    borderWidth:1
+  }
 });
