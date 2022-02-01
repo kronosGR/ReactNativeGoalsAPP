@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <View style={styles.screen}>
-      <GoalInput onAddGoal={addGoalHandler} />
+      <GoalInput onAddGoal={addGoalHandler} onDelete={()=> console.log('lllll')} />
       <FlatList
         keyExtractor={(item, index) => item.id}
         data={courseGoals}
