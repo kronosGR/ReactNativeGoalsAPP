@@ -4,3 +4,7 @@
 * Hooks
 * Flexbox
 * FlatList
+* Modal
+* Styling
+
+![screenshot](screenshot.png)
